@@ -5,12 +5,6 @@ if (document.getElementById("ttapi")) {
 	container.removeChild(document.getElementById("ttapi"));
 }
 
-// Inject new scripts into page
-var script = document.createElement('script');
-script.type = 'text/javascript';
-script.src = '//www.google.com/jsapi';
-document.body.appendChild(script);
-
 // Start up the SWF object
 google.load("swfobject", "2.1");
 
