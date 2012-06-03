@@ -5,6 +5,15 @@ if (document.getElementById("ttapi")) {
 	container.removeChild(document.getElementById("ttapi"));
 }
 
+// Inject new scripts into page
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//www.google.com/jsapi';
+document.body.appendChild(script);
+
+// Start up the SWF object
+google.load("swfobject", "2.1");
+
 // allowScriptAccess must be set to allow the Javascript from one 
 // domain to access the swf on the youtube domain
 var params = { allowScriptAccess: "always", bgcolor: "#cccccc" };
@@ -14,8 +23,9 @@ var atts = { id: "myytplayer" };
 var playerWidth= screen.width / 3;
 var playerHeight= screen.height / 3;
 swfobject.embedSWF("http://www.youtube.com/apiplayer?enablejsapi=1&playerapiid=ytplayer", 
-				 "ytapiplayer", playerWidth, playerHeight, "8", null, null, params, atts);	
-
+				 "ytapiplayer", playerWidth, playerHeight, "8", null, null, params, atts);		
+				 
+				 
 // Called when the youtube player has initialized
 function onYouTubePlayerReady(playerId) {
 	// Give the video player reference to the UI youtube player now that it's loaded
@@ -59,6 +69,6 @@ function initUI() {
 	obj.appendChild(auth);
 	obj.appendChild(userid);
 	obj.appendChild(roomid);
-	//obj.appendChild( vidPlayer );
+	obj.appendChild( vidPlayer );
 	container.appendChild(obj);
 }
