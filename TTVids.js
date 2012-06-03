@@ -59,6 +59,6 @@ function initUI() {
 	obj.appendChild(auth);
 	obj.appendChild(userid);
 	obj.appendChild(roomid);
-	obj.appendChild( vidPlayer );
+	//obj.appendChild( vidPlayer );
 	container.appendChild(obj);
 }
