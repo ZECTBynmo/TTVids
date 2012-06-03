@@ -1,6 +1,6 @@
 var container = document.body;
 if (document.getElementById("ttapi")) {
-	return container.removeChild(document.getElementById("ttapi"));
+	container.removeChild(document.getElementById("ttapi"));
 }
 var obj = document.createElement("div");
 obj.id = "ttapi";
