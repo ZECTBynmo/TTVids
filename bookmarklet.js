@@ -1,1 +1,1 @@
-javascript:(function(){var%20s=document.createElement('script');s.setAttribute('src','http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js');document.getElementsByTagName('body')[0].appendChild(s);})();
+javascript:(function(){if(turntable){TTVidsVersion=0.1;if($('#TTVids').length){ide.cleanUp()}else{var script=document.createElement('script');script.id='TTVids';script.type='text/javascript';script.src='https://raw.github.com/ZECTBynmo/TTVids/master/TTVids.js');document.body.appendChild(script);}}})();
